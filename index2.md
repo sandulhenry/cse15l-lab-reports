@@ -10,8 +10,8 @@ Test 2. Hello!
 
 > Blockquote
 
-*List 1
-*List 2
+* List 1
+* List 2
 1. One
 2. Two
 

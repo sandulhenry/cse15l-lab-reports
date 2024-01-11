@@ -20,3 +20,7 @@
 * It is not an error, as i changed directories as intended
 
 ![Image](Screenshot 2024-01-11 153257.png)
+
+* Working Directory: `/home/lecture1/`
+* In that directory, README was a file. You can't change directories into a file.
+* This was an error, because nothing happened and the process didn't change the working directory. 

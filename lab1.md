@@ -8,4 +8,12 @@
 [user@sahara ~]$
 ```
 * /home/lecture1
-* The output returned me to the home directory, when I ran `cd` with no arguements. 
+* The output returned me to the home directory, when I ran `cd` with no arguements. There was nothing passed as an argument, so this might be the default action for `cd`
+* This is not an error. This action could be useful for users to quickly jump back to the home directory.
+
+```
+[user@sahara ~]$ cd lecture1/
+[user@sahara ~/lecture1]$
+```
+* /home/
+* Passing a directory as an arguement changed the working directory to that location. `lecture1` was a file directory contained in the initial working directory, so you could move straight to it.

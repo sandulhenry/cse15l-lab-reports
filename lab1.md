@@ -17,4 +17,6 @@
 ```
 * /home/
 * Passing a directory as an arguement changed the working directory to that location. `lecture1` was a file directory contained in the initial working directory, so you could move straight to it.
-* 
+* It is not an error, as i changed directories as intended
+
+![Image](Screenshot 2024-01-11 153257.png)

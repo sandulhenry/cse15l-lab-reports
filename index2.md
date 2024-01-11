@@ -17,9 +17,9 @@ Test 2. Hello!
 
 ---
 
-'Inline code'
+`Inline code`
 
-'''
+```
 Code line 1
 code line 2
-'''
+```

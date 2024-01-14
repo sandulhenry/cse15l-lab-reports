@@ -35,6 +35,8 @@
 * The `ls` command, when provided a file as an argument, lists the path to that file. This is because there are no contents under that file.
 * This output is not an error.
 
+---
+
 ![Image](./lab1 photos/cat 1.png)
 * the working directory was `/home/lecture1`
 * The `cat` command took me to an output where it just repeated what was typed and needed to be cancelled (`^C`) to exit. Without an arguement, you can't concatenate anything.

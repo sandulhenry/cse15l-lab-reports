@@ -1,22 +1,22 @@
-# CSE 15L: Lab Report 1 - Remote Access and FileSystem (Week 1)
+# CSE 15L: Lab Report 1 (Week 1)
 ## Due Tuesday, Janurary 15th, 2024. - Sandul Henry
 
 ---
 
 ![Image](./lab1 photos/cd 1.png)
 * The working directory was `/home/lecture1`
-* The working directory contained both files and folders, and nothing was outputted when there was no arguement. However, the working directory was changed back to home.
+* The working directory contained both files and folders, and nothing was outputted when there was no arguement. However, the working directory was changed back to home, which is a deafult action.
 * This actions was not an error
 
 ![Image](./lab1 photos/cd 2.png)
 * The working directory was `/home`
-* The working directory was changed to the directory inputted, as it should 'change directory'
+* The working directory was changed to the directory inputted, as it should 'change directory' to the provided arguement.
 * This is not an error
 
 ![Image](./lab1 photos/cd 3.png)
 * The working directory was `/home/lecture1`
 * The system doesn't let you change directories into a file. `cd` needs a valid directory to change to, from the current working directory or starting from home
-* This is an error, because it corrects the user.
+* This is an error, because the user used the command with the wrong syntax
 
 ---
 
@@ -27,7 +27,7 @@
 
 ![Image](./lab1 photos/ls 2.png)
 * The working directory was `/home/lecture1`
-* When a subdirectory is provided as an arguement, `ls` will print the contents of that directory, but won't change into that subdirectory.
+* When a subdirectory is provided as an arguement, `ls` will print the contents of that directory, but won't change into that subdirectory. The files/directories printed were contained in the arguement's path
 * This is not an error
 
 ![Image](./lab1 photos/ls 3.png)

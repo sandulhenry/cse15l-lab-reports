@@ -48,7 +48,7 @@ class ChatServer {
 }
 ```
 
-*ins image 1*
+![Image](./lab2 photos/p1_1.png)
 
 * The method `handleRequest(URI url)` is called
 * The arguement to that method was the url, `/add-message?s=Hello&user=jpolitz`.

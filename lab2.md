@@ -55,7 +55,7 @@ class ChatServer {
 * This expanded the `masterString` field, and updated it.
 * The method breaks down the provided query in the url into a user, "jpolitz" and a message, "Hello". These are then added to the master string in the format `jpolitz: Hello`. That way, the master string can be returned and printed on site.
 
-*ins image 2*
+![Image](./lab2 photos/p1_2.png)
 
 * The method `handleRequest(URI url)` is called
 * The arguement to that method was the url, `/add-message?s=How are you&user=yash`.
@@ -65,6 +65,21 @@ class ChatServer {
 ---
 
 ## Part 2:
+
+The absolute path to the private key for your SSH key for logging into ieng6:
+![Image](./lab2 photos/p2_1.png)
+
+The absolute path to the public key for your SSH key for logging into ieng6:
+![Image](./lab2 photos/p2_2.png)
+
+A terminal interaction where you log into your ieng6 account without being asked for a password:
+![Image](./lab2 photos/p2_2.png)
+
+---
+
+## Part 3:
+
+I didn't know about the `scp` command. This is a powerful tool for managing files between computers. Before I was aware of this, I didn't know how files could be transferred from machine to machine from a command Line interface. 
 
 
 

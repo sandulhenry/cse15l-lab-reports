@@ -8,8 +8,7 @@ import java.io.IOException;
 import java.net.URI;
 
 class Handler implements URLHandler {
-    // The one bit of state on the server: a number that will be manipulated by
-    // various requests.
+    // The master String that is printed to the webpage. 
     String masterString = "";
 
     public String handleRequest(URI url) {
@@ -51,16 +50,16 @@ class ChatServer {
 ![Image](./lab2 photos/p1_1.png)
 
 * The method `handleRequest(URI url)` is called
-* The arguement to that method was the url, `/add-message?s=Hello&user=jpolitz`.
-* This expanded the `masterString` field, and updated it.
-* The method breaks down the provided query in the url into a user, "jpolitz" and a message, "Hello". These are then added to the master string in the format `jpolitz: Hello`. That way, the master string can be returned and printed on site.
+* The arguement to that method was the url, `/add-message?s=Hi! how are you&user=shenry`.
+* This was intended to be added to the `masterString` field, and updated it. This field had an empty string as it was `""`.
+* The method breaks down the provided query in the url into a user, "shenry" and a message, "Hi! how are you". These are then added to the master string field in the format `shenry: Hi! how are you`. That way, the master string can be returned and printed on site.
 
 ![Image](./lab2 photos/p1_2.png)
 
 * The method `handleRequest(URI url)` is called
-* The arguement to that method was the url, `/add-message?s=How are you&user=yash`.
-* This expanded the `masterString` field, and updated it. At this point, the `masterString` already has a value of `jpolitz: Hello` 
-* The method breaks down the provided query in the url into a user, "yash" and a message, "How are you". These are then added to the master string in the format `yash: How are you`. That way, the master string can be updated with concat() and returned to the website.
+* The arguement to that method was the url, `/add-message?s=I'm good , how are you&user=akander`.
+* This expanded the `masterString` field, and updated it. At this point, the `masterString` already has a value of `shenry: Hi! how are you` 
+* The method breaks down the provided query in the url into a user, "akander" and a message, "I'm good , how are you". These are then added to the master string field in the format `akander: I'm good , how are you`. That way, the master string can be updated with concat() and returned to the website.
 
 ---
 

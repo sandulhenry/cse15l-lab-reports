@@ -72,7 +72,7 @@ The absolute path to the public key for your SSH key for logging into ieng6:
 ![Image](./lab2 photos/p2_2.png)
 
 A terminal interaction where you log into your ieng6 account without being asked for a password:
-![Image](./lab2 photos/p2_2.png)
+![Image](./lab2 photos/p2_3.png)
 
 ---
 

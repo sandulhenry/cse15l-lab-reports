@@ -4,6 +4,7 @@
 ---
 
 * A failure-inducing input for the buggy program, as a JUnit test and any associated code (write it as a code block in Markdown):
+
 JUNIT test:
 ```
   @Test
@@ -12,6 +13,7 @@ JUNIT test:
     assertArrayEquals(new int[]{4,3,2,1}, ArrayExamples.reversed(input1));
   }
 ```
+
 Output:
 ```
 sandu@Sandul_Dell MINGW64 ~/OneDrive/Documents/School/CSE15L/lab3/lab3 (main)
@@ -44,6 +46,7 @@ Tests run: 2,  Failures: 1
 
 * An input that doesn't induce a failure, as a JUnit test and any associated code (write it as a code block in Markdown):
 
+JUNIT test:
 ```
 @Test
   public void testReversed() {
@@ -51,6 +54,7 @@ Tests run: 2,  Failures: 1
     assertArrayEquals(new int[]{0,0}, ArrayExamples.reversed(input1));
   }
 ```
+
 Output:
 ```
 sandu@Sandul_Dell MINGW64 ~/OneDrive/Documents/School/CSE15L/lab3/lab3 (main)
@@ -65,4 +69,8 @@ OK (2 tests)
 * The symptom, as the output of running the tests (provide it as a screenshot of running JUnit with at least the two inputs above):
 
 ![screenshot](/Screenshot 2024-02-10 190102.png)
+
+* The bug, as the before-and-after code change required to fix it (as two code blocks in Markdown)
+
+
   

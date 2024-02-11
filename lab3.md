@@ -98,7 +98,7 @@ In the original code, the initial array was being modified and returned. However
 
 ---
 
-### grep command line options
+### `grep` command line options
 
 ### -i, or --ignore_case
 ```
@@ -132,4 +132,66 @@ find-results.txt:biomed/1471-2091-2-13.txt
 ```
 
 * the -i arguement ignores the case. This was, it finds anything matching the letters, regardless of uppercase or lowercase.
-  
+
+### -c, or --count
+```
+sandu@Sandul_Dell MINGW64 ~/Downloads/docsearch/technical/biomed (main)
+$ grep -c -i "biology"  *.txt | head
+1468-6708-3-1.txt:0
+1468-6708-3-10.txt:0
+1468-6708-3-3.txt:0
+1468-6708-3-4.txt:0
+1468-6708-3-7.txt:0
+1471-2091-2-10.txt:0
+1471-2091-2-11.txt:0
+1471-2091-2-12.txt:0
+1471-2091-2-13.txt:0
+1471-2091-2-16.txt:0
+```
+
+```
+sandu@Sandul_Dell MINGW64 ~/Downloads/docsearch/technical/plos (main)
+$ grep -c -i "science" journal.pbio.0020001.txt
+21
+```
+
+* the `-c` option functions to "count" the number of appearences of the argument string. For example, it returned the number of times a case-insensitive "science" appeared in a text file. It also can count each individual file's appearence, but we piped it into a preview with `head`.
+
+### -l, or --files-with-matches
+```
+sandu@Sandul_Dell MINGW64 ~/Downloads/docsearch/technical/plos (main)
+$ grep -r -l "biology" | head
+journal.pbio.0020001.txt
+journal.pbio.0020012.txt
+journal.pbio.0020028.txt
+journal.pbio.0020042.txt
+journal.pbio.0020043.txt
+journal.pbio.0020063.txt
+journal.pbio.0020067.txt
+journal.pbio.0020071.txt
+journal.pbio.0020073.txt
+journal.pbio.0020127.txt
+```
+
+```
+sandu@Sandul_Dell MINGW64 ~/Downloads/docsearch/technical/government/Media (main)
+$ grep -l -i "California" *.txt
+Assuring_Underprivileged.txt
+Bridging_legal_aid_gap.txt
+Coup_Reshapes_Legal_Aid.txt
+Farm_workers.txt
+Few_who_need.txt
+Free_Legal_Assistance.txt
+Kiosks_for_court_forms.txt
+Legal-aid_chief.txt
+Legal_hotline.txt
+Lockyer_Warns.txt
+Nonprofit_Buys.txt
+Understanding.txt
+Unusual_Woodburn.txt
+Workers_aid_center.txt
+Working_for_Free.txt
+water_fees.txt
+```
+
+*the `-l` option lists all the files that contain a match to the string. This is useful to 

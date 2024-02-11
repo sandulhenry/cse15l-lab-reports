@@ -100,6 +100,36 @@ In the original code, the initial array was being modified and returned. However
 
 ### grep command line options
 
-###
+### -i, or --ignore_case
+```
+sandu@Sandul_Dell MINGW64 ~/OneDrive/Documents/School/CSE15L/docsearch/technical (main)
+$ grep -i "INDEED" */*.txt | head
+911report/chapter-1.txt:    The aircraft that spotted the "black smoke" was the same unarmed Air National Guard cargo plane that had seen American 77 crash into the Pentagon 27 minutes earlier. It had resumed its flight to Minnesota and saw the smoke from the crash of United 93, less than two minutes after the plane went down. At 10:17, the Command Center advised headquarters of its conclusion that United 93 had indeed crashed.
+911report/chapter-1.txt:    At the White House, the video teleconference was conducted from the Situation Room by Richard Clarke, a special assistant to the president long involved in counterterrorism. Logs indicate that it began at 9:25 and included the CIA; the FBI; the departments of State, Justice, and Defense; the FAA; and the White House shelter. The FAA and CIA joined at 9:40. The first topic addressed in the White House video teleconference-at about 9:40-was the physical security of the President, the White House, and federal agencies. Immediately thereafter it was reported that a plane had hit the Pentagon. We found no evidence that video teleconference participants had any prior information that American 77 had been hijacked and was heading directly toward Washington. Indeed, it is not clear to us that the video teleconference was fully under way before 9:37, when the Pentagon was struck.
+911report/chapter-11.txt:                imagine that aircraft could be used as weapons. Indeed, since al Qaeda and other
+911report/chapter-11.txt:                needed to be restored across the board. Indeed, the CTC budget had not been cut
+911report/chapter-12.txt:            Economic openness is essential. Terrorism is not caused by poverty. Indeed, many
+911report/chapter-12.txt:            Throughout government, and indeed in private enterprise, agencies and firms at these
+911report/chapter-12.txt:                percent of the critical infrastructure in the nation. Indeed, unless a terrorist's
+911report/chapter-13.3.txt:                high-level UAE officials had indeed been at the desert camp. CIA memo, "Recent High
+911report/chapter-13.4.txt:                involving himself in al Qaeda's broader terrorist program. Indeed, KSM describes
+911report/chapter-13.4.txt:                Indeed, the surviving plot participants have either not mentioned hawala or have
+```
 
+```
+sandu@Sandul_Dell MINGW64 ~/OneDrive/Documents/School/CSE15L/docsearch/technical (main)
+$ grep -i "Bio" *.txt | head
+find-results.txt:biomed
+find-results.txt:biomed/1468-6708-3-1.txt
+find-results.txt:biomed/1468-6708-3-10.txt
+find-results.txt:biomed/1468-6708-3-3.txt
+find-results.txt:biomed/1468-6708-3-4.txt
+find-results.txt:biomed/1468-6708-3-7.txt
+find-results.txt:biomed/1471-2091-2-10.txt
+find-results.txt:biomed/1471-2091-2-11.txt
+find-results.txt:biomed/1471-2091-2-12.txt
+find-results.txt:biomed/1471-2091-2-13.txt
+```
+
+* the -i arguement ignores the case. This was, it finds anything matching the letters, regardless of uppercase or lowercase.
   

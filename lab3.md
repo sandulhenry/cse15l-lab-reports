@@ -63,4 +63,6 @@ OK (2 tests)
 ```
 
 * The symptom, as the output of running the tests (provide it as a screenshot of running JUnit with at least the two inputs above):
+
+![screenshot](/Screenshot 2024-02-10 190102.png)
   

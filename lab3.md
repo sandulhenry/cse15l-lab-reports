@@ -115,23 +115,26 @@ $ grep -i "INDEED" */*.txt | head
 911report/chapter-13.4.txt:                involving himself in al Qaeda's broader terrorist program. Indeed, KSM describes
 911report/chapter-13.4.txt:                Indeed, the surviving plot participants have either not mentioned hawala or have
 ```
+* The argument shows results that ignore case, so it searches for strings like "INDEED", "indeed", or "Indeed", of combinations thereof. It is useful to search for many different occurances. 
+```
+sandu@Sandul_Dell MINGW64 ~/Downloads/docsearch/technical (main)
+$ grep -i "Bio" */*.txt | head
+911report/chapter-11.txt:                as Serbian ethnic cleansing, biological attacks, Iraqi weapons of mass destruction,
+911report/chapter-11.txt:                Interest in Biological, Radiological Weapons" (February 2001), "Taliban Holding Firm
+911report/chapter-11.txt:                chemical, biological, or nuclear attack-and he downplayed even that, writing several
+911report/chapter-11.txt:            With the important exception of analysis of al Qaeda efforts in chemical, biological,
+911report/chapter-12.txt:                    nuclear, chemical, radiological, or biological attack;
+911report/chapter-12.txt:                than two dozen other terrorist groups are pursuing CBRN [chemical, biological,
+911report/chapter-12.txt:            A Biometric Screening System
+911report/chapter-12.txt:                information in "feeder" documents used in identifying individuals. Biometric
+911report/chapter-12.txt:            Since September 11, the United States has built the first phase of a biometric
+911report/chapter-12.txt:                Indicator Technology program). It takes two biometric identifiers-digital
 
 ```
-sandu@Sandul_Dell MINGW64 ~/OneDrive/Documents/School/CSE15L/docsearch/technical (main)
-$ grep -i "Bio" *.txt | head
-find-results.txt:biomed
-find-results.txt:biomed/1468-6708-3-1.txt
-find-results.txt:biomed/1468-6708-3-10.txt
-find-results.txt:biomed/1468-6708-3-3.txt
-find-results.txt:biomed/1468-6708-3-4.txt
-find-results.txt:biomed/1468-6708-3-7.txt
-find-results.txt:biomed/1471-2091-2-10.txt
-find-results.txt:biomed/1471-2091-2-11.txt
-find-results.txt:biomed/1471-2091-2-12.txt
-find-results.txt:biomed/1471-2091-2-13.txt
-```
 
-* the -i arguement ignores the case. This was, it finds anything matching the letters, regardless of uppercase or lowercase.
+* the `-i` arguement ignores the case. This was, it finds anything matching the letters, regardless of uppercase or lowercase. In this case, it searches for case-insensitive occurances of "Bio".
+
+* Source: [thegeekstuff.com](https://www.example.com](https://www.thegeekstuff.com/2009/03/15-practical-unix-grep-command-examples/ )
 
 ### -c, or --count
 ```
@@ -148,14 +151,15 @@ $ grep -c -i "biology"  *.txt | head
 1471-2091-2-13.txt:0
 1471-2091-2-16.txt:0
 ```
-
+* the `-c` argument in this case goes file by file and returns the number of occurances. In the short example here, none of the files have an appearence of the word "Biology". This is useful to manually look for files that contain a string. 
 ```
 sandu@Sandul_Dell MINGW64 ~/Downloads/docsearch/technical/plos (main)
 $ grep -c -i "science" journal.pbio.0020001.txt
 21
 ```
+* the `-c` option functions to "count" the number of matches of the argument string. For example, it returned the number of times a case-insensitive "science" appeared in a text file. This is useful to clear, immediate answer on how many times a string appears.
 
-* the `-c` option functions to "count" the number of appearences of the argument string. For example, it returned the number of times a case-insensitive "science" appeared in a text file. It also can count each individual file's appearence, but we piped it into a preview with `head`.
+* Source: [thegeekstuff.com](https://www.example.com](https://www.thegeekstuff.com/2009/03/15-practical-unix-grep-command-examples )
 
 ### -l, or --files-with-matches
 ```
@@ -172,7 +176,7 @@ journal.pbio.0020071.txt
 journal.pbio.0020073.txt
 journal.pbio.0020127.txt
 ```
-
+* the `-l` option lists the files where there is a match. This useful to group those files, if you wanted to redirect it to another command or file to store the output.
 ```
 sandu@Sandul_Dell MINGW64 ~/Downloads/docsearch/technical/government/Media (main)
 $ grep -l -i "California" *.txt
@@ -193,5 +197,29 @@ Workers_aid_center.txt
 Working_for_Free.txt
 water_fees.txt
 ```
+* `-l` performance is similar to the previous example. It displays the files that contain a match.
 
-*the `-l` option lists all the files that contain a match to the string. This is useful to 
+* Source: [man7.org](https://man7.org/linux/man-pages/man1/grep.1.html)
+
+### --exclude-dir option
+```
+sandu@Sandul_Dell MINGW64 ~/Downloads/docsearch/technical (main)
+$ grep -i -r "Microbiology" --exclude-dir=biomed
+plos/journal.pbio.0020145.txt:        biology, biochemistry, cell development, genetics, microbiology, molecular biology [see
+plos/journal.pbio.0020439.txt:          reagents in microbiology may pose security risks in the hands of terrorists. Problems of
+```
+* the `--exclude-dir=biomed` excludes any results contained in the /biomed/ directory. This is useful to recursively search the contents of a directory while excluding one.
+```
+sandu@Sandul_Dell MINGW64 ~/Downloads/docsearch/technical (main)
+$ grep -i -r "science" --exclude-dir={plos,biomed,government}
+911report/chapter-13.1.txt:                all-source analysis, and advanced science and technology.
+911report/chapter-13.4.txt:                1987, Sufaat received a bachelor's degree in biological sciences, with a minor in
+911report/chapter-13.4.txt:                the National Academy of Sciences, Washington, D.C.), in which he spoke directly to
+911report/chapter-13.5.txt:                Needed to Reduce Time Taken to Adjudicate Visas for Science Students and Scholars,"
+911report/chapter-2.txt:                satisfy its own conscience and justify its existence."
+911report/chapter-2.txt:                humanities and social sciences. Many of these young men, even if able to study
+911report/chapter-3.txt:                Academy of Sciences and presented his most somber account yet of what could happen
+```
+* the `--exclude-dir` option can also be used to exclude multiple directories. In this case, the directories to exclude will be placed inside the brackets `{}`
+
+* Source: [man7.org](https://man7.org/linux/man-pages/man1/grep.1.html) and [baeldung.com](https://www.baeldung.com/linux/grep-exclude-directories )

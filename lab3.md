@@ -115,7 +115,9 @@ $ grep -i "INDEED" */*.txt | head
 911report/chapter-13.4.txt:                involving himself in al Qaeda's broader terrorist program. Indeed, KSM describes
 911report/chapter-13.4.txt:                Indeed, the surviving plot participants have either not mentioned hawala or have
 ```
-* The argument shows results that ignore case, so it searches for strings like "INDEED", "indeed", or "Indeed", of combinations thereof. It is useful to search for many different occurances. 
+
+* The argument shows results that ignore case, so it searches for strings like "INDEED", "indeed", or "Indeed", of combinations thereof. It is useful to search for many different occurances.
+
 ```
 sandu@Sandul_Dell MINGW64 ~/Downloads/docsearch/technical (main)
 $ grep -i "Bio" */*.txt | head
@@ -129,7 +131,6 @@ $ grep -i "Bio" */*.txt | head
 911report/chapter-12.txt:                information in "feeder" documents used in identifying individuals. Biometric
 911report/chapter-12.txt:            Since September 11, the United States has built the first phase of a biometric
 911report/chapter-12.txt:                Indicator Technology program). It takes two biometric identifiers-digital
-
 ```
 
 * the `-i` arguement ignores the case. This was, it finds anything matching the letters, regardless of uppercase or lowercase. In this case, it searches for case-insensitive occurances of "Bio".
@@ -137,6 +138,7 @@ $ grep -i "Bio" */*.txt | head
 * Source: [thegeekstuff.com](https://www.example.com](https://www.thegeekstuff.com/2009/03/15-practical-unix-grep-command-examples/ )
 
 ### -c, or --count
+
 ```
 sandu@Sandul_Dell MINGW64 ~/Downloads/docsearch/technical/biomed (main)
 $ grep -c -i "biology"  *.txt | head
@@ -151,17 +153,21 @@ $ grep -c -i "biology"  *.txt | head
 1471-2091-2-13.txt:0
 1471-2091-2-16.txt:0
 ```
-* the `-c` argument in this case goes file by file and returns the number of occurances. In the short example here, none of the files have an appearence of the word "Biology". This is useful to manually look for files that contain a string. 
+
+* the `-c` argument in this case goes file by file and returns the number of occurances. In the short example here, none of the files have an appearence of the word "Biology". This is useful to manually look for files that contain a string.
+
 ```
 sandu@Sandul_Dell MINGW64 ~/Downloads/docsearch/technical/plos (main)
 $ grep -c -i "science" journal.pbio.0020001.txt
 21
 ```
+
 * the `-c` option functions to "count" the number of matches of the argument string. For example, it returned the number of times a case-insensitive "science" appeared in a text file. This is useful to clear, immediate answer on how many times a string appears.
 
 * Source: [thegeekstuff.com](https://www.example.com](https://www.thegeekstuff.com/2009/03/15-practical-unix-grep-command-examples )
 
 ### -l, or --files-with-matches
+
 ```
 sandu@Sandul_Dell MINGW64 ~/Downloads/docsearch/technical/plos (main)
 $ grep -r -l "biology" | head
@@ -176,7 +182,9 @@ journal.pbio.0020071.txt
 journal.pbio.0020073.txt
 journal.pbio.0020127.txt
 ```
+
 * the `-l` option lists the files where there is a match. This useful to group those files, if you wanted to redirect it to another command or file to store the output.
+
 ```
 sandu@Sandul_Dell MINGW64 ~/Downloads/docsearch/technical/government/Media (main)
 $ grep -l -i "California" *.txt
@@ -197,18 +205,22 @@ Workers_aid_center.txt
 Working_for_Free.txt
 water_fees.txt
 ```
+
 * `-l` performance is similar to the previous example. It displays the files that contain a match.
 
 * Source: [man7.org](https://man7.org/linux/man-pages/man1/grep.1.html)
 
 ### --exclude-dir option
+
 ```
 sandu@Sandul_Dell MINGW64 ~/Downloads/docsearch/technical (main)
 $ grep -i -r "Microbiology" --exclude-dir=biomed
 plos/journal.pbio.0020145.txt:        biology, biochemistry, cell development, genetics, microbiology, molecular biology [see
 plos/journal.pbio.0020439.txt:          reagents in microbiology may pose security risks in the hands of terrorists. Problems of
 ```
+
 * the `--exclude-dir=biomed` excludes any results contained in the /biomed/ directory. This is useful to recursively search the contents of a directory while excluding one.
+
 ```
 sandu@Sandul_Dell MINGW64 ~/Downloads/docsearch/technical (main)
 $ grep -i -r "science" --exclude-dir={plos,biomed,government}
@@ -220,6 +232,7 @@ $ grep -i -r "science" --exclude-dir={plos,biomed,government}
 911report/chapter-2.txt:                humanities and social sciences. Many of these young men, even if able to study
 911report/chapter-3.txt:                Academy of Sciences and presented his most somber account yet of what could happen
 ```
+
 * the `--exclude-dir` option can also be used to exclude multiple directories. In this case, the directories to exclude will be placed inside the brackets `{}`
 
 * Source: [man7.org](https://man7.org/linux/man-pages/man1/grep.1.html) and [baeldung.com](https://www.baeldung.com/linux/grep-exclude-directories )

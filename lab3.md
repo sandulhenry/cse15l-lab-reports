@@ -138,7 +138,8 @@ $ grep -i "Bio" */*.txt | head
 
 * the `-i` arguement ignores the case. This was, it finds anything matching the letters, regardless of uppercase or lowercase. In this case, it searches for case-insensitive occurances of "Bio".
 
-* Source: [thegeekstuff.com](https://www.example.com](https://www.thegeekstuff.com/2009/03/15-practical-unix-grep-command-examples/ )
+* Source: [thegeekstuff.com](https://www.example.com](https://www.thegeekstuff.com/2009/03/15-practical-unix-grep-command-examples)
+
 
 ### `-c`, or `--count`
 
@@ -167,7 +168,9 @@ $ grep -c -i "science" journal.pbio.0020001.txt
 
 * the `-c` option functions to "count" the number of matches of the argument string. For example, it returned the number of times a case-insensitive "science" appeared in a text file. This is useful to clear, immediate answer on how many times a string appears.
 
-* Source: [thegeekstuff.com](https://www.example.com](https://www.thegeekstuff.com/2009/03/15-practical-unix-grep-command-examples )
+* Source: [thegeekstuff.com](https://www.example.com](https://www.thegeekstuff.com/2009/03/15-practical-unix-grep-command-examples)
+
+
 
 ### `-l`, or `--files-with-matches`
 
@@ -213,6 +216,7 @@ water_fees.txt
 
 * Source: [man7.org](https://man7.org/linux/man-pages/man1/grep.1.html)
 
+
 ### `--exclude-dir` option
 
 ```
@@ -238,4 +242,4 @@ $ grep -i -r "science" --exclude-dir={plos,biomed,government}
 
 * the `--exclude-dir` option can also be used to exclude multiple directories. In this case, the directories to exclude will be placed inside the brackets `{}`
 
-* Source: [man7.org](https://man7.org/linux/man-pages/man1/grep.1.html) and [baeldung.com](https://www.baeldung.com/linux/grep-exclude-directories )
+* Source: [man7.org](https://man7.org/linux/man-pages/man1/grep.1.html) and [baeldung.com](https://www.baeldung.com/linux/grep-exclude-directories)

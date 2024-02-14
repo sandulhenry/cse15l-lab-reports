@@ -44,6 +44,7 @@ FAILURES!!!
 Tests run: 2,  Failures: 1
 ```
 
+
 * An input that doesn't induce a failure, as a JUnit test and any associated code (write it as a code block in Markdown):
 
 JUNIT test:
@@ -66,9 +67,11 @@ Time: 0.018
 OK (2 tests)
 ```
 
+
 * The symptom, as the output of running the tests (provide it as a screenshot of running JUnit with at least the two inputs above):
 
 ![screenshot](/Screenshot 2024-02-10 190102.png)
+
 
 * The bug, as the before-and-after code change required to fix it (as two code blocks in Markdown)
 

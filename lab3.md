@@ -103,7 +103,7 @@ In the original code, the initial array was being modified and returned. However
 
 ### `grep` command line options
 
-### -i, or --ignore_case
+### `-i`, or `- -ignore_case`
 ```
 sandu@Sandul_Dell MINGW64 ~/OneDrive/Documents/School/CSE15L/docsearch/technical (main)
 $ grep -i "INDEED" */*.txt | head
@@ -140,7 +140,7 @@ $ grep -i "Bio" */*.txt | head
 
 * Source: [thegeekstuff.com](https://www.example.com](https://www.thegeekstuff.com/2009/03/15-practical-unix-grep-command-examples/ )
 
-### -c, or --count
+### `-c`, or `- -count`
 
 ```
 sandu@Sandul_Dell MINGW64 ~/Downloads/docsearch/technical/biomed (main)
@@ -169,7 +169,7 @@ $ grep -c -i "science" journal.pbio.0020001.txt
 
 * Source: [thegeekstuff.com](https://www.example.com](https://www.thegeekstuff.com/2009/03/15-practical-unix-grep-command-examples )
 
-### -l, or --files-with-matches
+### `-l`, or `- -files-with-matches`
 
 ```
 sandu@Sandul_Dell MINGW64 ~/Downloads/docsearch/technical/plos (main)
@@ -213,7 +213,7 @@ water_fees.txt
 
 * Source: [man7.org](https://man7.org/linux/man-pages/man1/grep.1.html)
 
-### --exclude-dir option
+### `- -exclude-dir` option
 
 ```
 sandu@Sandul_Dell MINGW64 ~/Downloads/docsearch/technical (main)

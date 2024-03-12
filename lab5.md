@@ -45,9 +45,123 @@ ___
 │   ├── TestListExamples.java
 │   ├── grade.sh
 ```
+* The content of the relevant file is `grade.sh` BEFORE the changes:
+```
+CPATH='.:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar'
+rm -rf student-submission
+mkdir grading-area
+git clone $1 student-submission
+echo 'Finished cloning'
 
+# Draw a picture/take notes on the directory structure that's set up after
+# getting to this point
 
+# Then, add here code to compile and run, and do any post-processing of the
+# tests
+if [ -f "student-submission/ListExamples.java" ]; then
+    echo "File found!"
+else
+    echo "ListExamples.java not found!"
+    exit 1
+fi
 
+# jars
+cp -r lib grading-area
+#list examples
+cp student-submission/ListExamples.java grading-area/
+# testListExamples
+cp TestListExamples.java grading-area/
+
+cd grading-area
+javac -cp $CPATH *.java
+if [ $? -ne 0 ]; then
+    echo "Compile Error!"
+    exit 1
+else
+    echo "Compiled Successfully"
+fi
+
+java -cp $CPATH org.junit.runner.JUnitCore TestListExamples > output.txt
+if [ $? == 0 ]; then
+    echo "Perfect Pass"
+    echo "Score: 100%"
+    exit 0
+else
+    lastline=$(cat output.txt | tail -n 2 | head -n 1)
+    tests=$(echo $lastline | awk -F'[, ]' '{print $3}')
+    failures=$(echo $lastline | awk -F'[, ]' '{print $6}')
+    successes=$(($tests -$failures))
+    echo ""
+    echo "Tests ran: $tests"
+    echo "Tests failed: $failures"
+    echo "Score is $(expr $successes / $tests)"
+fi
+```
+
+* The content of the relvant file `grade.sh` AFTER:
+```
+CPATH='.:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar'
+rm -rf student-submission
+rm -rf grading-area
+mkdir grading-area
+git clone $1 student-submission
+echo 'Finished cloning'
+
+# Draw a picture/take notes on the directory structure that's set up after
+# getting to this point
+
+# Then, add here code to compile and run, and do any post-processing of the
+# tests
+if [ -f "student-submission/ListExamples.java" ]; then
+    echo "File found!"
+else
+    echo "ListExamples.java not found!"
+    exit 1
+fi
+
+# jars
+cp -r lib grading-area
+#list examples
+cp student-submission/ListExamples.java grading-area/
+# testListExamples
+cp TestListExamples.java grading-area/
+
+cd grading-area
+javac -cp $CPATH *.java
+if [ $? -ne 0 ]; then
+    echo "Compile Error!"
+    exit 1
+else
+    echo "Compiled Successfully"
+fi
+
+java -cp $CPATH org.junit.runner.JUnitCore TestListExamples > output.txt
+if [ $? == 0 ]; then
+    echo "Perfect Pass"
+    echo "Score: 100%"
+    exit 0
+else
+    lastline=$(cat output.txt | tail -n 2 | head -n 1)
+    tests=$(echo $lastline | awk -F'[, ]' '{print $3}')
+    failures=$(echo $lastline | awk -F'[, ]' '{print $6}')
+    successes=$(($tests -$failures))
+    echo ""
+    echo "Tests ran: $tests"
+    echo "Tests failed: $failures"
+    echo "Score is $(expr $successes / $tests)"
+fi
+```
+
+* The lines we ran that demonstrated the bug:
+`bash grade.sh https://github.com/ucsd-cse15l-f22/list-methods-lab3`
+and then
+`bash grade.sh https://github.com/ucsd-cse15l-f22/list-methods-corrected`
+
+* We changed the script so that `grading-area/` is removed so we don't see the unexpected behavior, and it is cleared for a good reset
+
+## Part 2 - Reflection: 
+
+* I liked learning about bash scripting, like in the week 6 lab. I didn't know bash scripts could have that much functinality. It was cool to think about how our own programming assignments are graded. 
 
 
 

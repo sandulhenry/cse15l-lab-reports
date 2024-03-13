@@ -7,7 +7,7 @@ ___
 ![image](https://github.com/sandulhenry/cse15l-lab-reports/assets/154122103/86771d19-4471-40c9-94ef-3ce83e27ae4a)
 
 ### Step 2:
-*The TA says:* "Hi! You could be right. Could you post your bash autograder script and double check its behavior? make sure you follow the logical progression of events. 
+*The TA says:* "Hi! You could be right. Could you post your bash autograder script and double check its behavior? make sure you follow the logical progression of events. In short, we want to make sure your bash script follows your intended behavior
 
 ### Step 3:
 *The Student says:* Hi! OMG! You were right I made a mistake in my bash script! I forgot to remove the directory grading-area/ in the script. Here is the before and after:
@@ -15,9 +15,9 @@ ___
 ![before](https://github.com/sandulhenry/cse15l-lab-reports/assets/154122103/ed49cc8e-6ba8-408b-a3c9-033305a0587f)
 ![after](https://github.com/sandulhenry/cse15l-lab-reports/assets/154122103/38d97f43-8ded-48b7-9836-4be250dbb903)
 
-*The Student:* and here is the behabior after we make the change:
+*The Student:* and here is the behavior after we make the change:
 
-![behavior](https://github.com/sandulhenry/cse15l-lab-reports/assets/154122103/f376285b-8bb3-4077-8d78-d99f608699c3)
+![image](https://github.com/sandulhenry/cse15l-lab-reports/assets/154122103/4a2cea43-5d7e-486a-aab9-a77760abf8bf)
 
 ### Step 4:
 
@@ -45,6 +45,7 @@ ___
 │   ├── TestListExamples.java
 │   ├── grade.sh
 ```
+
 * The content of the relevant file is `grade.sh` BEFORE the changes:
 
 ```
@@ -151,7 +152,10 @@ and then
 
 ## Part 2 - Reflection: 
 
-* I liked learning about bash scripting, like in the week 6 lab. I didn't know bash scripts could have that much functinality. It was cool to think about how our own programming assignments are graded. 
+* I liked learning about bash scripting, like in the week 6 lab. I didn't know bash scripts could have that much functinality. It was cool to think about how our own programming assignments are graded.
+
+
+*Sources used: the script described in https://ucsd-cse15l-w24.github.io/week6/index.html*
 
 
 

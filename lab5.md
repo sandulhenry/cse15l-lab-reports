@@ -10,7 +10,7 @@ ___
 *The TA says:* "Hi! You could be right. Could you post your bash autograder script and double check its behavior? make sure you follow the logical progression of events. In short, we want to make sure your bash script follows your intended behavior
 
 ### Step 3:
-*The Student says:* Hi! OMG! You were right I made a mistake in my bash script! I forgot to remove the directory grading-area/ in the script. Here is the before and after:
+*The Student says:* Hi! OMG! You were right I made a mistake in my bash script! I forgot to remove the directory grading-area/ in the script. Here is the before and after of the relvant part of the script:
 
 ![before](https://github.com/sandulhenry/cse15l-lab-reports/assets/154122103/ed49cc8e-6ba8-408b-a3c9-033305a0587f)
 ![after](https://github.com/sandulhenry/cse15l-lab-reports/assets/154122103/38d97f43-8ded-48b7-9836-4be250dbb903)
@@ -25,21 +25,12 @@ ___
 ```
 ├── grader-review-sandulhenry
 │   ├── grading-area
-│   │   ├── IsMoon.class
-│   │   ├── ListExamples.java
-│   │   ├── TestListExamples.class
-│   │   ├── lib
-|   │   │   ├── hamcrest-core-1.3.jar
-|   │   │   ├── junit-4.13.2.jar
-│   │   ├── ListExamples.class
-│   │   ├── StringChecker.class
-│   │   ├── TestListExamples.java
-│   │   ├── output.txt
+│   │   ├── 
 │   ├── lib
 │   │   ├── hamcrest-core-1.3.jar
 │   │   ├── junit-4.13.2.jar
 │   ├── student-submission
-│   │   ├── ListExamples.java
+│   │   ├── 
 │   ├── GradeServer.java
 │   ├── Server.java
 │   ├── TestListExamples.java
@@ -148,7 +139,7 @@ fi
 and then
 `bash grade.sh https://github.com/ucsd-cse15l-f22/list-methods-corrected`
 
-* We changed the script so that `grading-area/` is removed so we don't see the unexpected behavior, and it is cleared for a good reset
+* We changed the script so that `grading-area/` is removed so we don't see the unexpected behavior, and it is cleared for a good reset. That way we don't get the message that grading area already exists. 
 
 ## Part 2 - Reflection: 
 

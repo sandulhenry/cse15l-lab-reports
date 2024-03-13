@@ -3,11 +3,12 @@
 
 ### Step 4:
 ![4](/lab4_photos/Screenshot 2024-02-23 171220.png)
-* Type `ssh user@ieng6.ucsd.edu`. Then hit `<enter>`. You should be logged in automatically.
+* Type `ssh s7henry@ieng6.ucsd.edu`. Then hit `<enter>`. You should be logged in automatically.
 
 ### Step 5:
 ![5](/lab4_photos/Screenshot 2024-02-23 172144.png)
-* Type `git clone [repository ssh]` and then hit `<enter>`. This clones the repository.
+* Natigate to github and copy the ssh address of the repository, and copt it with `<Ctrl> + <C>`. 
+* Type `git clone <Ctrl + V>` and then hit `<enter>`. This clones the repository, after you paste your ssh. 
 * Change into the cloned directory with `cd lab7` and `<enter>`.
 
 ### Step 6. 
